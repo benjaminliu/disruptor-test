@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.disruptor;
 
 public class Event<T> {
     private T data;

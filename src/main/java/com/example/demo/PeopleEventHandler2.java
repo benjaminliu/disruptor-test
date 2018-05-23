@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import com.example.demo.disruptor.Event;
 import com.lmax.disruptor.EventHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,6 +12,6 @@ public class PeopleEventHandler2 implements EventHandler<Event<People>> {
 
     @Override
     public void onEvent(Event<People> peopleEvent, long l, boolean b) throws Exception {
-        logger.info("2 - {}", peopleEvent.get().getTotal());
+        logger.info("handler 2 - {}", peopleEvent.get().getTotal());
     }
 }

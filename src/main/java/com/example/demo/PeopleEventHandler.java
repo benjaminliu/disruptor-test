@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import com.example.demo.disruptor.Event;
 import com.lmax.disruptor.EventHandler;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,7 +13,7 @@ public class PeopleEventHandler implements EventHandler<Event<People>> {
         People people = peopleEvent.get();
 
         String total = String.format("%s - %s - %s", people.getName(), people.getAge(), people.getGrade());
-        logger.info("1 - {}", total);
+        logger.info("handler 1 - {}", total);
         people.setTotal(total);
     }
 }
